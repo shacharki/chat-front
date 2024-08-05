@@ -7,6 +7,8 @@ import Header from '../../components/Common/Header';
 import Footer from '../../components/Common/Footer';
 import Sidebar from '../../components/Common/Sidebar';
 import AudioPage from '../Audio/AudioPage'; // Import the AudioPage
+import SignIn from '../Auto/signIn'
+import SignUp from '../Auto/signUp';
 
 // import './HomePage.css';
 
@@ -25,6 +27,8 @@ const HomePage = () => {
           <Header onMenuClick={toggleSidebar} />
           <main>
             <Routes>
+              <Route path="/signIn" element={<SignIn/>}/> 
+              <Route path="/signUp" element={<SignUp/>}/> 
               <Route path="/chat" element={<ChatPage />} />
               <Route path="/media" element={<MediaPage />} />
               <Route path="/documents" element={<DocumentPage />} />
