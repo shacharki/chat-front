@@ -6,6 +6,8 @@ import DocumentPage from '../Documents/DocPage';
 import Header from '../../components/Common/Header';
 import Footer from '../../components/Common/Footer';
 import Sidebar from '../../components/Common/Sidebar';
+import AudioPage from '../Audio/AudioPage'; // Import the AudioPage
+
 // import './HomePage.css';
 
 const HomePage = () => {
@@ -26,6 +28,7 @@ const HomePage = () => {
               <Route path="/chat" element={<ChatPage />} />
               <Route path="/media" element={<MediaPage />} />
               <Route path="/documents" element={<DocumentPage />} />
+              <Route path="/audio" element={<AudioPage />} /> {/* Add route here */}
               <Route path="/" element={<ChatPage />} />
             </Routes>
           </main>
