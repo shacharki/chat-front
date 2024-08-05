@@ -1,11 +1,20 @@
 import React from 'react';
+import { IconButton, Toolbar, AppBar, Typography } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
 import './Header.css';
 
-const Header = () => {
+const Header = ({ onMenuClick }) => {
   return (
-    <header className="header">
-      <h1>Multi-Modal Chat App</h1>
-    </header>
+    <AppBar position="static" className="header">
+      <Toolbar className="toolbar">
+        <IconButton edge="start" color="inherit" aria-label="menu" onClick={onMenuClick}>
+          <MenuIcon />
+        </IconButton>
+        <Typography variant="h6" className="title">
+          Chat Application
+        </Typography>
+      </Toolbar>
+    </AppBar>
   );
 };
 
